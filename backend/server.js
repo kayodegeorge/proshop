@@ -22,9 +22,9 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(cookieParser())
 
-app.get('/', (req, res) => {
-  res.send('API IS CURRENTLY RUNNING!')
-})
+// app.get('/', (req, res) => {
+//   res.send('API IS CURRENTLY RUNNING!')
+// })
 
 app.use('/api/products', productRoutes)
 app.use('/api/users', userRoutes)
@@ -49,7 +49,7 @@ if (process.env.NODE_ENV === 'production') {
   )
 } else {
   app.get('/', (req, res) => {
-    res.send('API IS CURRENTLY RUNNING!')
+    res.send('API IS CURRENTLY RUNNING')
   })
 }
 
